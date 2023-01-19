@@ -13,39 +13,41 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-success">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 color-white" href="#">FISHJEJE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="index.html">FISHJEJE</a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav fs-5 fw-bold">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Tentang Ikan
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ikan_oscar.html">Ikan Oscar</a></li>
+                            <li><a class="dropdown-item" href="bintang_laut.html">Bintang Laut</a></li>
+                            <li><a class="dropdown-item" href="ikan_barakuda.html">Ikan Barakuda</a></li>
+                            <li><a class="dropdown-item" href="ikan_nila.html">Ikan Nila</a></li>
+                            <li><a class="dropdown-item" href="ikan_baronang.html">Ikan Baronang</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="forms.html">Form</a>
+                      </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="pilihan.html">Produk</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Tips</a>
+                    </li>
                 </ul>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tentang</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="ikan_oscar.html">IKAN OSCAR</a></li>
-                        <li><a href="bintang_laut.html">BINTANG LAUT</a></li>
-                        <li><a href="ikan_baronang.html">IKAN BARONANG</a></li>
-                        <li><a href="ikan_nila.html">IKAN NILA</a></li>
-                        <li><a href="ikan_barakuda.html">IKAN BARAKUDA</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="forms.html">Forms</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Produk</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Tips</a>
-                </li>
             </div>
         </div>
     </nav>
