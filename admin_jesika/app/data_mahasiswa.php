@@ -16,27 +16,26 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>No.</th>
-                    <th>Nama Ikan</th>
-                    <th>spesifikasi</th>
-                    <th>Deskripsi</th>
-                    <th>Foto</th>
+                    <th>id</th>
+                    <th>Nama</th>
+                    <th>Nim</th>
+                    <th>semester</th>
+                    <th>action</th>
                   </tr>
                   </thead>
                   <tbody>
                     <?php
                     $no = 0;
-                    $query = mysqli_query($koneksi,"SELECT * FROM tb_ikan");
+                    $query = mysqli_query($koneksi,"SELECT * FROM tb_mahasiswa");
                     while($mhs = mysqli_fetch_array($query)){
                       $no++
                     ?>
                   <tr>
                     <td width='5'><?php echo $no; ?></td>
-                    <td><?php echo $mhs['nama_ikan']; ?> </td>
-                    <td><?php echo $mhs['spesifikasi']; ?></td>
-                    <td><?php echo $mhs['deskripsi']; ?></td>
-                    <td><?php echo $mhs['foto']; ?></td>
-                    <td>..</td>
+                    <td><?php echo $mhs['nama']; ?> </td>
+                    <td><?php echo $mhs['nim']; ?></td>
+                    <td><?php echo $mhs['semester']; ?></td>
+                    <td>...</td>
                   </tr>
                   <?php } ?>
                   </tbody>
