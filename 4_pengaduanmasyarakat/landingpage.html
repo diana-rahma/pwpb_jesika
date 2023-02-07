@@ -84,181 +84,6 @@ img {
     z-index: -1;
 }
 
-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-.card-effect {
-    box-shadow: var(--box-shadow);
-    background-color: var(--white);
-    padding: 25px;
-    transition: all 0.35s ease;
-}
-
-.card-effect:hover {
-    box-shadow: none;
-    transform: translateY(5px);
-}
-
-.iconbox {
-    width: 54px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary);
-    color: var(--white);
-    font-size: 32px;
-    border-radius: 100px;
-    flex: none;
-}
-
-
-.service {
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-}
-
-.service::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: -100%;
-    left: 0;
-    background-color: var(--primary);
-    z-index: -1;
-    opacity: 0;
-    transition: all 0.4s ease;
-}
-
-
-.service:hover .iconbox {
-    background-color: var(--white);
-    color: var(--primary);
-}
-
-.service:hover h5,
-.service:hover p {
-    color: var(--white);;
-}
-
-.service:hover::after {
-    opacity: 1;
-    top: 0;
-}
-
-.col-img {
-    background-image: url(../img/cover2.jpg);
-    background-position: center;
-    background-size: cover;
-    min-height: 500px;
-}
-
-.project {
-    position: relative;
-    overflow: hidden;
-}
-
-.project .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(21, 20, 51, 0.8);
-    padding: 30px;
-    display: flex;
-    align-items: flex-end;
-    transition: all 0.4s ease;
-    opacity: 0;
-}
-
-.project img {
-    transition: all 0.4s ease;   
-}
-
-.project:hover .overlay{
-    opacity: 1;
-}
-
-.project:hover img {
-    transform: scale(1.1);
-}
-
-
-.pricing i {
-    font-size: 20px;
-    color: var(--primary);
-}
-
-.pricing ul li {
-    margin-top: 8px;
-}
-
-.team-member img {
-    width: 125px;
-    height: 125px;
-    border-radius: 100px;
-}
-
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-}
-.social-icons a {
-    width: 34px;
-    height: 34px;
-    background-color: var(--primary);
-    border-radius: 2px solid var(--primary);
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    margin-left: 5px;
-    transition: all 0.4s ease;
-    border: 2px solid var(--primary);
-}
-
-.social-icons a:hover {
-    color: var(--primary);
-    background-color: transparent;
-    border-color: var(--primarys);
-}
-
-
-form input.form-control {
-    height: 56px;
-}
-
-form .form-control {
-    border: transparent;
-    border-radius: 0;
-    background-color: rgba(0,0,0,0.02);
-}
-
-
-.footer-top {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    background-color: var(--dark);
-}
-
-.footer-top a {
-    color: var(--body);
-}
-
-.footer-top a:hover {
-    color: var(--white);
-}
-
-.footer-bottom {
-    background-color: #242933;
-}
 
   </style>
   <body>
@@ -274,13 +99,16 @@ form .form-control {
                 <a class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Tentang Kami</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Masyarakat</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Disabled</a>
+                <a class="nav-link" href="#">Petugas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tanggapan</a>
               </li>
         </div>
       </nav>
@@ -298,49 +126,6 @@ form .form-control {
         </div>
     </div>
 </div>
-
-<section id="portfolio">
-    <div class="container-fluid">
-        <div class="row mb-5">
-            <div class="col-md-8 mx-auto text-center">
-                <h1 data-aos="fade-up" data-aos-duration="2000">Pengaduan Masyarakat</h1>
-            </div>
-        </div>
-        <div class="row g-3">
-            <div class="col-lg-4 col-sm-6">
-                <div class="project">
-                    <img src="https://www.menpan.go.id/site/images/berita/2022/20220519_-_Tingkatkan_Kapasitas_Pengelolaan_Pengaduan_Melalui_Pelatihan_Teknis_Operator_3.jpg" data-aos="fade-up" data-aos-duration="2000" alt="">
-                    <div class="overlay">
-                        <div>
-                            <h6 class="text-white">Pengaduan Masyarakat</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="project">
-                    <img src="https://asset.kompas.com/crops/PtW3pZTx0vPCErwIHnXu4JFrqhk=/0x0:1024x683/750x500/data/photo/2022/06/02/6298276fd2025.jpg" data-aos="fade-up" data-aos-duration="2000" alt="">
-                    <div class="overlay">
-                        <div>
-                            <h6 class="text-white">Pengaduan Masyarakat</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="project">
-                    <img src="https://www.pom.go.id/new/admin/dat/20190818/WhatsApp_Image_2019-08-17_at_11.19_.01_PM_.jpeg" data-aos="fade-up" data-aos-duration="2000" alt="">
-                    <div class="overlay">
-                        <div>
-                            <h6 class="text-white">Pengaduan Masyarakat</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><!-- PROJECTS -->
-
 <div class="b-example-divider"></div>
 
 <footer class="text-center text-lg-start text-white" style="background-color: pink">
