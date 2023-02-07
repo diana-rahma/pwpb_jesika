@@ -1,244 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDEX</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<style>
-    .btn{
-      border-radius: 20px;
-      background: pink;
-      padding: 10px 20px;
-      font-size: 20px;
-      font-family: "montserrat";
-      cursor: pointer;
-      margin: 10px;
-      transition: 0.8s;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn{
-      color: #fff;
-    }
-    .btn:hover{
-      color: #fff;
-    }
-    .btn::before{
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 0%;
-      background: black;
-      z-index: -1;
-      transition: 0.5s;
-    }
+    <title>LANDINGPAGE</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
 
-    .btn::before{
-      bottom: 0;
-      border-radius: 50% 50% 0 0;
-    }
-    .btn:hover::before{
-      height: 180%;
-    }
-</style>
-<body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg " style="background-color: pink;">
-            <div class="container">
-                <a class="navbar-brand fw-bold fs-4 color-white" href="landingpage.html">Pengaduan Masyarakat</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav fs-5 fw-bold">
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="index.html">Beranda</a>
-                        </li>
-                        <li class="nav-item dropdown mx-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Tentang Kami
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="landingpage.html">Pengaduan Masyarakat</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">Masyarakat</a>
-                          </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">Petugas</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">Tanggapan</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="nav-link" href="index.php">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --white: #ffffff;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
 
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
-            </div>
+body {
+    font-family: "Sora", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
 
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://www.menpan.go.id/site/images/berita/2022/20220519_-_Tingkatkan_Kapasitas_Pengelolaan_Pengaduan_Melalui_Pelatihan_Teknis_Operator_3.jpg"
-                        alt="IKAN OSCAR" class="d-block w-100" style="width:100%" height="700px">
-                    <div class="carousel-caption">
-                        <h3>SISTEM PENGADUAN</h3>
-                        <p>Ikan oscar adalah sebuah genus ikan dari familia Cichlidae. Ada dua spesies dalam genus ini,
-                            keduanya ditemukan di Amerika Selatan. Mereka adalah omnivora dan memakan ikan kecil,
-                            moluska, dan binatang tidak bertulang belakang. </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://asset.kompas.com/crops/PtW3pZTx0vPCErwIHnXu4JFrqhk=/0x0:1024x683/750x500/data/photo/2022/06/02/6298276fd2025.jpg"
-                        alt="BINTANG LAUT" class="d-block w-100" style="width:100%" height="700px">
-                    <div class="carousel-caption">
-                        <h3>PENGADUAN MASYARAKAT</h3>
-                        <p>Bintang laut adalah echinodermata berbentuk bintang yang termasuk dalam kelas Asteroidea.
-                            Penggunaan umum sering menemukan nama-nama ini juga diterapkan pada ophiuroids, yang secara
-                            tepat disebut sebagai bintang rapuh atau bintang keranjang.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://asset.kompas.com/crops/cSVzgfIXZUkYQY3WRD2LJAux0nY=/0x262:1280x1115/750x500/data/photo/2021/08/26/61270dd2e2088.jpeg"
-                        alt="IKAN BARAKUDA" class="d-block w-100" style="width:100%" height="700px">
-                    <div class="carousel-caption">
-                        <h3>PENGELOLAAN PENGADUAN</h3>
-                        <p>Ikan Barakuda adalah ikan dalam kelas Actinopterygii yang dikenal berwujud menyeramkan dan
-                            berukuran
-                            tubuh besar, yaitu sampai panjang enam kaki dan lebar satu kaki. Tubuhnya panjang dan
-                            ditutupi oleh
-                            sisik yang halus. Ikan ini dapat ditemukan di samudra tropis dan subtropis di seluruh dunia.
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://www.pom.go.id/new/admin/dat/20190818/WhatsApp_Image_2019-08-17_at_11.19_.01_PM_.jpeg"
-                        alt="IKAN NILA" class="d-block w-100" style="width:100%" height="700px">
-                    <div class="carousel-caption">
-                        <h3>PELAYANAN PENGADUAN</h3>
-                        <p>Ikan nila adalah sejenis ikan konsumsi air tawar. Ikan ini diintroduksi dari Afrika, tepatnya
-                            Afrika bagian timur, pada tahun 1969, dan kini menjadi ikan peliharaan yang populer di
-                            kolam-kolam air tawar di Indonesia sekaligus hama di setiap sungai dan danau Indonesia.
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="http://kejati-jabar.go.id/v2/wp-content/uploads/2020/04/banner-app-02.png"
-                        alt="IKAN BARONANG" class="d-block w-100" style="width:100%" height="700px">
-                    <div class="carousel-caption">
-                        <h3>PENGADUAN ONLINE</h3>
-                        <p>Baronang adalah sekelompok ikan laut yang masuk dalam keluarga Siginidae. Ikan ini dikenal
-                            oleh
-                            masyarakat dengan nama yang berbeda-beda satu sama lain sesuai spesiesnya, seperti di
-                            Kepulauan Seribu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center pt-5">
-                <h1 class="fs-1 fw-bold pt-3">Surat Luqman Ayat 12</h1>
-                <p class="fs-4">
-                    وَلَقَدْ اٰتَيْنَا لُقْمٰنَ الْحِكْمَةَ اَنِ اشْكُرْ لِلّٰهِ ۗوَمَنْ يَّشْكُرْ فَاِنَّمَا يَشْكُرُ لِنَفْسِهٖۚ وَمَنْ كَفَرَ فَاِنَّ اللّٰهَ غَنِيٌّ حَمِيْدٌ</p>
-                <p>Artinya: Dan sesungguhnya telah Kami berikan hikmat kepada Luqman, yaitu: "Bersyukurlah kepada Allah. Dan barangsiapa yang bersyukur (kepada Allah), maka sesungguhnya ia bersyukur untuk dirinya sendiri; dan barangsiapa yang tidak bersyukur, maka sesungguhnya Allah Maha Kaya lagi Maha Terpuji."</p>
-            </div>
+h1,h2,h3,h4,h5,h6,
+.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
 
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    width: 160px;
+}
+
+.navbar .nav-link {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.btn {
+    padding: 14px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+
+.hero {
+    background-image: url(https://inspektorat.lampungselatankab.go.id/asset/foto_statis/a5f0e031592e11b0d022e8a963140a43.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.8);
+    z-index: -1;
+}
+
+
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light " style="background-color: pink;">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 color-white bg-pink" href="#">Pengaduan Masyarakat</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav"  >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tentang Kami</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Masyarakat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Petugas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Tanggapan</a>
+              </li>
         </div>
-    </div>
-
-    <br><br>
-    <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col-md-6 col-12">
-                <div class="text">
-                    <h1>Layanan Pengaduan Masyarakat</span></h1><br>
-                    <p>Pengaduan masyarakat adalah penyampaian keluhan oleh masyarakat kepada pemerintah atas pelayanan yang tidak sesuai dengan standar pelayanan, atau pengabaian kewajiban dan/atau pelanggaran larangan. Penanganan pengaduan masyarakat adalah proses kegiatan yang meliputi penerimaan, pencatatan, penelaahan, tindak lanjut penyaluran tindaklanjut, pengarsipan, pemantauan dan pelaporan. Pengadu adalah seluruh pihak baik warganegara maupun penduduk baik orang perorangan, kelompok maupun badan hukum yang menyampaikan pengaduan kepada Pengelola pengaduan pelayanan publik. Masyarakat adalah seluruh pihak, baik warga negara maupun penduduk, kelompok, maupun badan hukum yang berkedudukan sebagai penerima manfaat pelayanan di bidang Komunikasi dan informatika, baik secara langsung maupun tidak langsung. </p><br>
-                        <a href="#"><button type="button" class="btn">Pilih Sekarang</button></a>
-                </div>
-            </div>
-            <div class="col-md-6 col-12">
-                <img src="https://www.menpan.go.id/site/images/berita/2022/20220519_-_Tingkatkan_Kapasitas_Pengelolaan_Pengaduan_Melalui_Pelatihan_Teknis_Operator_3.jpg"
-                    alt="" width="100%" class="rounded">
-            </div>
-        </div>
-
-        <br><br>
-        <div class="row row-cols-1 row-cols-md-2" style="padding-top: 3rem;">
-            <div class="col-md-6 col-12">
-                <img src="https://asset.kompas.com/crops/PtW3pZTx0vPCErwIHnXu4JFrqhk=/0x0:1024x683/750x500/data/photo/2022/06/02/6298276fd2025.jpg"
-                    alt="" width="100%" class="rounded">
-            </div>
-            <div class="col-md-6 col-12">
-                <div class="text">
-                    <h1>Syarat Layanan Pengaduan</span></h1><br>
-                    <p>a. Dokumen/berkas pendukung</p>
-                    <p>b. Tanda pengenal/identitas</p>
-                      <br>
-                        <a href="#"><button type="button" class="btn">Pilih Sekarang</button></a>
-                </div>
+      </nav>
+      
+<div class="hero vh-100 d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 mx-auto text-center">
+                <h1 class="display 4 text-white" data-aos="zoom-in-up"  data-aos-duration="2000">Surat Al-Baqarah (2) Ayat 213</h1>
+                <p class="text-white my-4" data-aos="zoom-in-up" data-aos-duration="2000">
+                    كَانَ النَّاسُ أُمَّةً وَاحِدَةً فَبَعَثَ اللَّهُ النَّبِيِّينَ مُبَشِّرِينَ وَمُنْذِرِينَ وَأَنْزَلَ مَعَهُمُ الْكِتَابَ بِالْحَقِّ لِيَحْكُمَ بَيْنَ النَّاسِ فِيمَا اخْتَلَفُوا فِيهِ ۚ وَمَا اخْتَلَفَ فِيهِ إِلَّا الَّذِينَ أُوتُوهُ مِنْ بَعْدِ مَا جَاءَتْهُمُ الْبَيِّنَاتُ بَغْيًا بَيْنَهُمْ ۖ فَهَدَى اللَّهُ الَّذِينَ آمَنُوا لِمَا اخْتَلَفُوا فِيهِ مِنَ الْحَقِّ بِإِذْنِهِ ۗ وَاللَّهُ يَهْدِي مَنْ يَشَاءُ إِلَىٰ صِرَاطٍ مُسْتَقِيمٍ</p>
+                <p class="text-white my-4" data-aos="zoom-in-up" data-aos-duration="2000">“Manusia itu adalah umat yang satu. (setelah timbul perselisihan), maka Allah mengutus para nabi, sebagai pemberi peringatan, dan Allah menurunkan bersama mereka Kitab yang benar, untuk memberi keputusan di antara manusia tentang perkara yang mereka perselisihkan. Tidaklah berselisih tentang Kitab itu melainkan orang yang telah didatangkan kepada mereka Kitab, yaitu setelah datang kepada mereka keterangan-keterangan yang nyata, karena dengki antara mereka sendiri. Maka Allah memberi petunjuk orang-orang yang beriman kepada kebenaran tentang hal yang mereka perselisihkann itu dengan kehendak-Nya. Dan Allah selalu memberi petunjuk orang yang dikehendaki-Nya kepada jalan yang lurus.”</p>
+                <a href="../4_pengaduanmasyarakat/index.html" class="btn btn-danger me-sm-2">Selanjutnya</a>
             </div>
         </div>
     </div>
+</div>
+<div class="b-example-divider"></div>
 
-    <br><br><br>
-    <div class="container-fluid">
-        <h1 style="text-align: center;">Aduhkan Keluh Kesahmu Di <span style="color: pink">PENGADUAN MASYARAKAT</span></h1><br>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <img src="https://asset.kompas.com/crops/cSVzgfIXZUkYQY3WRD2LJAux0nY=/0x262:1280x1115/750x500/data/photo/2021/08/26/61270dd2e2088.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="https://www.pom.go.id/new/admin/dat/20190818/WhatsApp_Image_2019-08-17_at_11.19_.01_PM_.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="http://kejati-jabar.go.id/v2/wp-content/uploads/2020/04/banner-app-02.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <br><br>
-  <!-- Footer -->
- 
-<footer class="text-center text-lg-start " style="background-color: pink">
+<footer class="text-center text-lg-start text-white" style="background-color: pink">
     <section class="py-1">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
@@ -295,7 +185,10 @@
   </footer>
   <!-- Footer -->
 
-  <!-- Footer -->
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+  </body>
 </html>
