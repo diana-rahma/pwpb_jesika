@@ -121,18 +121,8 @@
               </button>
             </div>
             <form method="get" action="add/tambah_data.php">
-            <div class="modal-body">
-              <div class="row">
-                <div class="col">
-                 Nama : <span id="nama"></span>
-                </div>
-                <div class="col">
-                  Nim : <span id="nim"></span>
-                </div>
-                <div class="col">
-                  Semester : <span id="semester"></span>
-                </div>
-              </div>
+            <div class="modal-body" id="hasil-view-data">
+             
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
