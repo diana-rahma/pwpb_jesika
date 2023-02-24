@@ -26,9 +26,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="index.php?page=data-mk" class="nav-link">
+                <a href="index.php?page=input-nilai" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data MK</p>
+                  <p>Input Nilai</p>
                 </a>
               </li>
               <li class="nav-item">
