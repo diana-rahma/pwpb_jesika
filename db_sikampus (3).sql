@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 16 Feb 2023 pada 05.57
+-- Generation Time: 02 Mar 2023 pada 07.43
 -- Versi Server: 5.6.25
 -- PHP Version: 5.6.11
 
@@ -40,10 +40,24 @@ CREATE TABLE IF NOT EXISTS `tb_mahasiswa` (
 --
 
 INSERT INTO `tb_mahasiswa` (`id`, `nama`, `nim`, `semester`, `status`, `foto`) VALUES
-(3, 'Jejee', '236781', 3, 'Aktif', 'boneka_1.jpg'),
-(4, 'Jesika', '236782', 4, 'Lulus ', 'boneka_3.webp'),
-(5, 'Novanda', '236783', 2, 'Lulus', 'boneka_2.jpg'),
-(10, 'Rahmalia', '236784', 3, 'Aktif', '');
+(4, 'Jesikaa', '236782', 4, 'Lulus ', ''),
+(5, 'Novanda', '236783', 2, 'Lulus', ''),
+(6, 'Rahmalia', '236784', 3, 'Aktif', ''),
+(13, 'Putri', '236785', 1, 'Aktif', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_nilai`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_nilai` (
+  `id` int(11) NOT NULL,
+  `nilai_normatif` int(11) NOT NULL,
+  `nilai_adaptif` int(11) NOT NULL,
+  `nilai_produktif` int(11) NOT NULL,
+  `rata_rata` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -57,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `tb_users` (
   `username` varchar(25) NOT NULL,
   `password` varchar(25) NOT NULL,
   `level` enum('superadmin','operator') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `tb_users`
@@ -65,7 +79,8 @@ CREATE TABLE IF NOT EXISTS `tb_users` (
 
 INSERT INTO `tb_users` (`id`, `nama`, `username`, `password`, `level`) VALUES
 (1, 'admin', 'coba', '12345', 'superadmin'),
-(2, 'Jesika', 'jeje', 'jesika', 'operator');
+(2, 'Jesika', 'jeje', 'jesika', 'operator'),
+(3, 'Jesikanovanda', 'jesika', 'jesika', 'operator');
 
 --
 -- Indexes for dumped tables
@@ -75,6 +90,12 @@ INSERT INTO `tb_users` (`id`, `nama`, `username`, `password`, `level`) VALUES
 -- Indexes for table `tb_mahasiswa`
 --
 ALTER TABLE `tb_mahasiswa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_nilai`
+--
+ALTER TABLE `tb_nilai`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -93,10 +114,15 @@ ALTER TABLE `tb_users`
 ALTER TABLE `tb_mahasiswa`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
+-- AUTO_INCREMENT for table `tb_nilai`
+--
+ALTER TABLE `tb_nilai`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `tb_users`
 --
 ALTER TABLE `tb_users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
