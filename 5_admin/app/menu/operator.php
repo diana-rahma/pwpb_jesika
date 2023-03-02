@@ -32,9 +32,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="index.php?page=data-dosen" class="nav-link">
+                <a href="index.php?page=bayar-spp" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Dosen</p>
+                  <p>Bayar SPP</p>
                 </a>
               </li>
             </ul>

@@ -13,7 +13,7 @@ $view = mysqli_fetch_array($query);
             <div class="card-body">
                 <form method="post" action="update/update_data.php" enctype="multipart/form-data">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <!-- text input -->
                             <div class="form-group">
                                 <label>Nama</label>
@@ -21,17 +21,14 @@ $view = mysqli_fetch_array($query);
                                 <input type="text" class="form-control" placeholder="Nama" name="id" value="<?php echo $view['id']; ?>" hidden>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="form-group">
                                 <label>NIM</label>
                                 <input type="text" class="form-control" placeholder="NIM" name="nim" value="<?php echo $view['nim']; ?>">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <!-- textarea -->
-                            <div class="form-group">
+                        <div class="col-sm-4">
+                        <div class="form-group">
                                 <label>Semester</label>
                                 <select class="custom-select" id="inputGroupSelect01" name="semester">
                                     <option value="<?php echo $view['semester']; ?>" selected><?php echo $view['semester']; ?></option>
@@ -42,22 +39,25 @@ $view = mysqli_fetch_array($query);
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
                             <div class="form-group">
-                                <label>Input Nilai</label>
-                                <input type="text" class="form-control" placeholder="Masukkan Nilai" name="nilai">
+                                <label>Input Nilai Normatif</label>
+                                <input type="text" class="form-control" placeholder="Nilai Normatif" name="nilai">
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-sm-6">
-                            <label class="form-label" for="customFile">Upload Foto</label>
-                            <input type="file" name="foto" class="form-control" id="customFile" />
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Input Nilai Adaptif</label>
+                                <input type="text" class="form-control" placeholder="Nilai Adaptif" name="nilai">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <img src="foto/<?php echo $view['foto']; ?>" width="100px" class="rounded float-left">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Input Nilai Produktif</label>
+                                <input type="text" class="form-control" placeholder="Nilai Produktif" name="nilai">
+                            </div>
                         </div>
                     </div>
                     <div class="row">

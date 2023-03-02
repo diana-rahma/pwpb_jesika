@@ -51,6 +51,9 @@ include('header.php');?>
       else if($_GET['page']=='insert-nilai'){
         include('nilai/insert_nilai.php');
       }
+      else if($_GET['page']=='bayar-spp'){
+        include('bayar_spp.php');
+      }
       else{
         include('not_found.php');
       }

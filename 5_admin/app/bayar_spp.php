@@ -13,6 +13,10 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-lg">
+                  Tambah Data
+                </button>
+                <br></br>
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
@@ -36,12 +40,12 @@
                     <td><?php echo $mhs['nim']; ?></td>
                     <td><?php echo $mhs['semester']; ?></td>
                     <td>
-                      <a href="index.php?page=insert-nilai&& id=<?php echo $mhs['id']; ?>" class="btn btn-sm btn-success">Input Nilai</a>
-                      <a class="view-data btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-view" 
+                      <a onclick="hapus_data(<?php echo $mhs['id']; ?>)" class="btn btn-sm btn-danger">Hapus</a>
+                      <a href="index.php?page=edit-data&& id=<?php echo $mhs['id']; ?>" class="btn btn-sm btn-success">Edit</a>
+                      <a class="view-data btn btn-sm- btn-primary" data-toggle="modal" data-target="#modal-view" 
                       data-nama="<?php echo $mhs['nama']; ?>"
                       data-nim="<?php echo $mhs['nim']; ?>"
                       data-semester="<?php echo $mhs['semester']; ?>" >View Data</a>
-                      <a onclick="cetak_raport(<?php echo $mhs['id']; ?>)" class="btn btn-sm btn-secondary">Cetak Raport</a>
                     </td>
                   </tr>
                   <?php } ?>
@@ -131,13 +135,13 @@
         <!-- /.modal-dialog -->
       </div>
       <script>
-        function cetak_raport(data_id){
+        function hapus_data(data_id){
           // alert('ok');
           // window.location=("delete/hapus_data.php?id="+data_id);
           Swal.fire({
-            title: 'Apakah Nilai ini akan Dicetak?',
+            title: 'Apakah Datanya akan Dihapus?',
             showCancelButton: true,
-            confirmButtonText: 'Cetak raport',
+            confirmButtonText: 'Hapus Data',
             confirmButtonColor: '#CD5050',
           }).then((result)=> {
             if (result.isConfirmed){
